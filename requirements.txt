@@ -1,2 +1,6 @@
 streamlit_option_menu
 torch==2.1.0
+scipy==1.7.3
+nltk
+pydantic==1.10.11
+openai==0.28
