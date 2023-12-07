@@ -388,7 +388,7 @@ def chat(model, df, corpus_embedings, corpus, answers):
         elif model_choice == "gpt 3.5 RAG Mode":
 
             import openai
-            openai.api_key = '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' #os.getenv("OPENAI_API_KEY")
+            openai.api_key = st.secrets["key"]
 
 #             st.write(assistant_response)
             with st.spinner("waiting for API response"):
@@ -403,7 +403,7 @@ def chat(model, df, corpus_embedings, corpus, answers):
         elif model_choice == "gpt 3.5":
 
             import openai
-            openai.api_key = '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' #os.getenv("OPENAI_API_KEY")
+            openai.api_key = st.secrets["key"]
             with st.spinner("waiting for API response"):
                 completion = openai.ChatCompletion.create(
                   model="gpt-3.5-turbo",
@@ -420,7 +420,7 @@ def chat(model, df, corpus_embedings, corpus, answers):
             
         elif model_choice == "Fine-Tuned Custom GPT":     
             import openai
-            openai.api_key = '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'
+            openai.api_key = st.secrets["key"]
             message = []
             message.append({"role": "system", "content": "You are a python expert, proficient in  object orientated programming"})
             message.append({"role": "user", "content": prompt})
