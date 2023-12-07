@@ -1,1 +1,2 @@
 streamlit_option_menu
+torch==2.1.0
